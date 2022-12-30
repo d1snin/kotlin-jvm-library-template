@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-rootProject.name = "ktor-jvm-library-template"
+rootProject.name = "kotlin-jvm-library-template"
 
 pluginManagement {
     plugins {
         val kotlinVersion: String by settings
 
-        id("org.jetbrains.dokka") version kotlinVersion
+        val dokkaVersion: String by settings
+
         kotlin("jvm") version kotlinVersion
+
+        id("org.jetbrains.dokka") version dokkaVersion
     }
 }
